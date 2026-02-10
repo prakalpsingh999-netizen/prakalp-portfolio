@@ -13,7 +13,7 @@ const db = firebase.firestore();
 
 // --- FEATURE 1: GITHUB API (Used in projects.html) ---
 async function fetchGithub() {
-    const user = "prakalpsingh16"; 
+    const user = "prakalpsingh999-netizen"; 
     const repoList = document.getElementById('repo-list');
     if (!repoList) return;
 
@@ -58,7 +58,7 @@ if (contactForm) {
     });
 }
 async function getLiveProjects() {
-    const username = "prakalpsingh16"; // Your GitHub ID [cite: 35]
+    const username = "prakalpsingh999-netizen"; // Your GitHub ID [cite: 35]
     const repoContainer = document.getElementById('repo-feed');
 
     try {
