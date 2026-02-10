@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Prakalp Pratap Singh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container" style="padding-top: 100px;">
+        <div class="tile shadow-tile" style="max-width: 600px; margin: auto;">
+            <h2 style="color: var(--sea-green)"><i class="fas fa-envelope-open-text"></i> Send a Message</h2>
+            <p>Your inquiry will be synced directly to my Firebase Cloud Database.</p>
+            
+            <form id="contactForm" class="interactive-form">
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <textarea id="message" rows="5" placeholder="How can we collaborate on Data Science?" required></textarea>
+                <button type="submit" class="glow-button" style="background: var(--sea-green); width: 100%;">Push to Cloud Database</button>
+            </form>
+            
+            <div class="contact-details" style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+                <p><i class="fas fa-phone"></i> +91 7983958999</p>
+                <p><i class="fas fa-map-marker-alt"></i> Agra, Uttar Pradesh</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

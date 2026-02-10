@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Projects | Prakalp Pratap Singh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">PPS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="tile">
+            <h2 style="color: var(--sea-green)"><i class="fas fa-project-diagram"></i> Featured Engineering Works</h2>
+            <p>Showcasing scalable systems and agricultural innovation.</p>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="tile shadow-tile">
+                <span class="badge">Travel Management</span>
+                <h3>GoPlan System</h3>
+                <p>An integrated travel management system featuring complex Data Flow Diagrams (DFDs) for seamless user planning.</p>
+            </div>
+
+            <div class="tile shadow-tile">
+                <span class="badge">Agriculture & AI</span>
+                <h3>FarmConnect Platform</h3>
+                <p>An agricultural platform for which I authored patent documents, bridging the gap between farmers and technology.</p>
+            </div>
+        </div>
+
+        <section class="tile">
+            <h3 style="color: var(--sea-green)"><i class="fab fa-github"></i> Live Repository Feed (API)</h3>
+            <div id="repo-list" class="github-stream">
+                <div class="loader">Accessing GitHub REST API...</div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
