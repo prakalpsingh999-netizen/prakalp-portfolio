@@ -57,3 +57,40 @@ if (contactForm) {
         }
     });
 }
+async function getLiveProjects() {
+    const username = "prakalpsingh16"; // Your GitHub ID [cite: 35]
+    const repoContainer = document.getElementById('repo-feed');
+
+    try {
+        // Step 1: Request the data
+        const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated`);
+        
+        // Step 2: Convert response to a list (JSON)
+        const repos = await response.json();
+
+        // Step 3: Clear the 'loading' message
+        repoContainer.innerHTML = '';
+
+        // Step 4: Map through the first 4 projects and create Tiles
+        repos.slice(0, 4).forEach(repo => {
+            const card = document.createElement('div');
+            card.className = 'mini-tile'; // Matches your shadow styling
+            
+            card.innerHTML = `
+                <h4 style="color: #20B2AA; margin-bottom: 5px;">${repo.name}</h4>
+                <p style="font-size: 0.85rem; color: #64748b;">${repo.description || 'Professional Engineering Project'}</p>
+                <div class="repo-stats">
+                    <span>⭐ ${repo.stargazers_count}</span>
+                    <span><i class="fas fa-code-branch"></i> ${repo.language || 'Data'}</span>
+                </div>
+                <a href="${repo.html_url}" target="_blank" class="repo-link">View Source Code</a>
+            `;
+            repoContainer.appendChild(card);
+        });
+    } catch (error) {
+        repoContainer.innerHTML = "<p>Error connecting to API. Verify GitHub username.</p>";
+    }
+}
+
+// Call the function when the page loads
+getLiveProjects();
